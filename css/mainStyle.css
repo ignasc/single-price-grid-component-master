@@ -1,0 +1,134 @@
+html > * {
+    background-color: hsl(204, 43%, 93%);
+    font-family: 'Karla', sans-serif;
+}
+
+body {
+    min-height: 98vh;
+    width: 98vw;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div#mainContent {
+    overflow: hidden;
+    border-radius: 5px;
+    margin-top: 8vh;
+    box-shadow: 0px 5px 15px hsl(204, 11%, 72%);
+}
+
+/*Font settings*/
+h1, p {
+    margin: 1em 0;
+}
+h1 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+p, li {
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 1.8em;
+}
+#welcomeCard > h1 {
+    color: hsl(179, 62%, 43%);
+}
+#welcomeCard > p#standOut {
+    color: hsl(71, 73%, 54%);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.1em;
+}
+#welcomeCard > p {
+    color: hsl(218, 22%, 67%);
+}
+#subCard {
+    color: white;
+}
+#price {
+    font-size: 2rem;
+    font-weight: 700;
+}
+#reasoningCard {
+    color: white;
+    padding-bottom: 20px;
+}
+#reasoningCard > ul {
+    color: hsl(204, 43%, 93%);
+}
+
+.card {
+    padding: 10px 20px;
+}
+
+div#welcomeCard{
+    background-color: white;
+}
+div#subCard {
+    background-color: hsl(179, 62%, 43%);
+}
+div#reasoningCard {
+    background-color: hsl(178, 38%, 57%);
+}
+
+.button {
+    background-color: hsl(71, 73%, 54%);
+    padding: 1em;
+    max-width: 80%;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px hsl(179, 62%, 36%);
+    margin: auto;
+    text-align: center;
+}
+
+.attribution {
+    
+    padding-top: 0.8em;
+    font-size: 11px;
+    text-align: center;
+    color: black;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        width: 98vw;
+        max-width: none;
+    }
+    div#mainContent {
+        max-width: 600px;
+        max-height: 500px;
+
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 45% 55%;
+
+        grid-template-areas: 
+        "welcome welcome"
+        "signup whyUs";
+    }
+    #welcomeCard {
+        grid-area: welcome;
+        padding: 25px 50px 25px 20px;
+    }
+    #subCard {
+        grid-area: signup;
+        padding-left: 25px;
+    }
+    #reasoningCard {
+        grid-area: whyUs;
+        padding-right: 25px;
+        padding-bottom: 40px;
+    }
+    .button {
+        margin-top: 25px;
+    }
+}
